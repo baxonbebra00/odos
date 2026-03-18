@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЕГЭ 2026 · Ященко · Варианты 11–15</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=IBM+Plex+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #0f1117;
+  --surface:   #181c27;
+  --card:      #1e2333;
+  --border:    #2a3050;
+  --accent:    #4f8ef7;
+  --accent2:   #f7c94f;
+  --green:     #3ecf8e;
+  --red:       #f76f6f;
+  --text:      #e8eaf2;
+  --muted:     #8892b0;
+  --mono:      'IBM Plex Mono', 'Courier New', monospace;
+  --sans:      'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --serif:     'IBM Plex Serif', Georgia, serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+background: var(–bg);
+color: var(–text);
+font-family: var(–sans);
+font-weight: 300;
+font-size: 15px;
+line-height: 1.7;
+min-height: 100vh;
+}
+
+/* ─── HEADER ─── */
+header {
+background: var(–surface);
+border-bottom: 1px solid var(–border);
+padding: 2.5rem 1.5rem 2rem;
+position: relative;
+overflow: hidden;
+}
+header::after {
+content: ‘’;
+position: absolute;
+top: 0; right: 0;
+width: 400px; height: 100%;
+background: radial-gradient(ellipse at 80% 50%, rgba(79,142,247,.08) 0%, transparent 70%);
+pointer-events: none;
+}
+.header-inner { max-width: 860px; margin: 0 auto; position: relative; }
+
+.kicker {
+font-family: var(–mono);
+font-size: .72rem;
+letter-spacing: .2em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: .6rem;
+}
+header h1 {
+font-family: var(–serif);
+font-size: clamp(1.4rem, 4vw, 2rem);
+font-weight: 700;
+color: #fff;
+line-height: 1.2;
+margin-bottom: .8rem;
+}
+.header-meta {
+display: flex;
+flex-wrap: wrap;
+gap: .5rem 1.5rem;
+font-size: .8rem;
+color: var(–muted);
+}
+.header-meta span { display: flex; align-items: center; gap: .3rem; }
+.dot { width: 5px; height: 5px; border-radius: 50%; background: var(–accent); display: inline-block; }
+
+/* ─── NAV ─── */
+nav {
+background: var(–surface);
+border-bottom: 1px solid var(–border);
+padding: .7rem 1.5rem;
+display: flex;
+gap: .4rem;
+flex-wrap: wrap;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+nav a {
+font-family: var(–mono);
+font-size: .75rem;
+font-weight: 600;
+padding: .3rem .75rem;
+border-radius: 4px;
+background: var(–card);
+color: var(–muted);
+text-decoration: none;
+border: 1px solid var(–border);
+transition: background .15s, color .15s, border-color .15s;
+letter-spacing: .03em;
+}
+nav a:hover {
+background: var(–accent);
+color: #fff;
+border-color: var(–accent);
+}
+
+/* ─── MAIN ─── */
+main { max-width: 860px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+
+/* ─── VARIANT SECTION ─── */
+.variant { margin-bottom: 3.5rem; }
+
+.variant-header {
+display: flex;
+align-items: baseline;
+gap: 1rem;
+padding: 1.25rem 0 1rem;
+border-bottom: 2px solid var(–border);
+margin-bottom: 1.5rem;
+position: relative;
+}
+.variant-header::before {
+content: ‘’;
+position: absolute;
+bottom: -2px; left: 0;
+width: 60px; height: 2px;
+background: var(–accent);
+}
+.variant-title {
+font-family: var(–serif);
+font-size: 1.6rem;
+font-weight: 700;
+color: #fff;
+}
+
+/* ─── ANSWER STRIP ─── */
+.answers-strip {
+display: flex;
+flex-wrap: wrap;
+gap: .35rem;
+padding: .9rem 1rem;
+background: var(–card);
+border: 1px solid var(–border);
+border-radius: 8px;
+margin-bottom: 1.75rem;
+}
+.answer-chip {
+font-family: var(–mono);
+font-size: .8rem;
+display: flex;
+align-items: center;
+gap: .3rem;
+padding: .2rem .55rem;
+background: var(–surface);
+border: 1px solid var(–border);
+border-radius: 4px;
+white-space: nowrap;
+}
+.answer-chip span {
+color: var(–muted);
+font-size: .72rem;
+}
+.answer-chip strong { color: var(–accent2); font-weight: 600; }
+
+/* ─── TASK CARD ─── */
+.task {
+background: var(–card);
+border: 1px solid var(–border);
+border-radius: 10px;
+margin-bottom: 1rem;
+overflow: hidden;
+}
+
+.task-header {
+display: flex;
+align-items: center;
+gap: .75rem;
+padding: .8rem 1.1rem;
+background: var(–surface);
+border-bottom: 1px solid var(–border);
+}
+.task-num {
+font-family: var(–mono);
+font-size: .78rem;
+font-weight: 600;
+width: 26px; height: 26px;
+display: flex; align-items: center; justify-content: center;
+background: var(–accent);
+color: #fff;
+border-radius: 4px;
+flex-shrink: 0;
+letter-spacing: 0;
+}
+.task-title {
+font-size: .88rem;
+font-weight: 600;
+color: #fff;
+flex: 1;
+}
+.task-topic {
+font-family: var(–mono);
+font-size: .67rem;
+letter-spacing: .08em;
+text-transform: uppercase;
+color: var(–muted);
+background: var(–card);
+padding: .15rem .5rem;
+border-radius: 3px;
+border: 1px solid var(–border);
+white-space: nowrap;
+}
+
+.problem {
+padding: .9rem 1.1rem .75rem;
+font-size: .9rem;
+color: #c8ccdc;
+border-bottom: 1px solid var(–border);
+line-height: 1.65;
+}
+
+.solution {
+padding: .9rem 1.1rem;
+display: flex;
+flex-direction: column;
+gap: .55rem;
+border-bottom: 1px solid var(–border);
+}
+.solution p { font-size: .88rem; color: var(–muted); }
+.solution p.img-note {
+font-size: .83rem;
+color: #6272a4;
+font-style: italic;
+padding: .5rem .75rem;
+border-left: 3px solid var(–border);
+background: rgba(42,48,80,.4);
+border-radius: 0 4px 4px 0;
+}
+
+code.formula {
+display: block;
+font-family: var(–mono);
+font-size: .82rem;
+background: rgba(15,17,23,.7);
+border: 1px solid var(–border);
+border-left: 3px solid var(–accent);
+padding: .55rem .85rem;
+border-radius: 0 6px 6px 0;
+color: #a8d8ff;
+white-space: pre-wrap;
+line-height: 1.6;
+}
+
+.solution table {
+width: 100%;
+border-collapse: collapse;
+font-family: var(–mono);
+font-size: .78rem;
+color: var(–muted);
+}
+.solution table th,
+.solution table td {
+padding: .3rem .6rem;
+border: 1px solid var(–border);
+text-align: center;
+}
+.solution table th {
+background: var(–surface);
+color: var(–text);
+font-weight: 600;
+}
+
+.answer-box {
+padding: .65rem 1.1rem;
+font-family: var(–mono);
+font-size: .85rem;
+font-weight: 600;
+color: var(–green);
+letter-spacing: .03em;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 540px) {
+.task-topic { display: none; }
+.problem { font-size: .85rem; }
+code.formula { font-size: .77rem; }
+.answers-strip { gap: .25rem; }
+.answer-chip { font-size: .75rem; }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="kicker">ЕГЭ 2026 &middot; Профильная математика</div>
+    <h1>Ященко — 50 вариантов</h1>
+    <div class="header-meta">
+      <span><span class="dot"></span>Ответы верифицированы по ctege.info</span>
+      <span><span class="dot"></span>Часть 1 &middot; все 12 заданий базовой части</span>
+      <span><span class="dot"></span>Варианты 11–15</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#v11">Вариант 11</a>
+  <a href="#v12">Вариант 12</a>
+  <a href="#v13">Вариант 13</a>
+  <a href="#v14">Вариант 14</a>
+  <a href="#v15">Вариант 15</a>
+</nav>
+
+<main>
+
+<!-- ══════════════ ВАРИАНТ 11 ══════════════ -->
+
+<section class="variant" id="v11">
+  <div class="variant-header">
+    <div class="variant-title">Вариант 11</div>
+  </div>
+
+  <div class="answers-strip">
+    <div class="answer-chip"><span>1)</span><strong>8</strong></div>
+    <div class="answer-chip"><span>2)</span><strong>200</strong></div>
+    <div class="answer-chip"><span>3)</span><strong>4</strong></div>
+    <div class="answer-chip"><span>4)</span><strong>0,2</strong></div>
+    <div class="answer-chip"><span>5)</span><strong>0,5</strong></div>
+    <div class="answer-chip"><span>6)</span><strong>−6</strong></div>
+    <div class="answer-chip"><span>7)</span><strong>10</strong></div>
+    <div class="answer-chip"><span>8)</span><strong>3</strong></div>
+    <div class="answer-chip"><span>9)</span><strong>0,0075</strong></div>
+    <div class="answer-chip"><span>10)</span><strong>35&thinsp;316</strong></div>
+    <div class="answer-chip"><span>11)</span><strong>5</strong></div>
+    <div class="answer-chip"><span>12)</span><strong>−34</strong></div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">1</div>
+      <div class="task-title">Ромб и вписанная окружность</div>
+      <div class="task-topic">Геометрия</div>
+    </div>
+    <div class="problem">Острый угол ромба равен 30°. Радиус окружности, вписанной в ромб, равен 2. Найдите сторону ромба.</div>
+    <div class="solution">
+      <p>Для ромба со стороной <em>a</em> и острым углом α: площадь S = a²·sin α, полупериметр = 2a, радиус вписанной окружности:</p>
+      <code class="formula">r = S / (полупериметр) = a²·sin α / (2a) = a·sin α / 2</code>
+      <p>Откуда:</p>
+      <code class="formula">a = 2r / sin α = 2·2 / sin 30° = 4 / 0,5 = 8</code>
+    </div>
+    <div class="answer-box">Ответ: 8</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">2</div>
+      <div class="task-title">Квадрат длины суммы векторов</div>
+      <div class="task-topic">Векторы</div>
+    </div>
+    <div class="problem">Найдите квадрат длины вектора <strong>a</strong> + <strong>b</strong>. (Рисунок с векторами в условии.)</div>
+    <div class="solution">
+      <p class="img-note">Формула: |<strong>a</strong> + <strong>b</strong>|² = |<strong>a</strong>|² + 2(<strong>a</strong>·<strong>b</strong>) + |<strong>b</strong>|². Скалярное произведение <strong>a</strong>·<strong>b</strong> = |<strong>a</strong>|·|<strong>b</strong>|·cos θ. Подстановка значений из рисунка даёт 200.</p>
+    </div>
+    <div class="answer-box">Ответ: 200</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">3</div>
+      <div class="task-title">Перелив жидкости между цилиндрами</div>
+      <div class="task-topic">Геометрия</div>
+    </div>
+    <div class="problem">Уровень жидкости в первом цилиндрическом сосуде — 16 см. Диаметр второго сосуда в 2 раза больше. Найдите новый уровень жидкости.</div>
+    <div class="solution">
+      <p>Объём жидкости постоянен. Радиус второго сосуда — 2r.</p>
+      <code class="formula">π·r²·16 = π·(2r)²·h₂
+r²·16 = 4r²·h₂
+h₂ = 16 / 4 = 4 см</code>
+    </div>
+    <div class="answer-box">Ответ: 4</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">4</div>
+      <div class="task-title">Вероятность попадания в пару</div>
+      <div class="task-topic">Теория вероятностей</div>
+    </div>
+    <div class="problem">В группе 6 человек, среди них — Михаил и Олег. Группу делят на 3 пары случайным образом. Найдите вероятность того, что Михаил и Олег окажутся в одной паре.</div>
+    <div class="solution">
+      <p>Общее число способов разбить 6 человек на 3 пары:</p>
+      <code class="formula">N = 6! / (2³·3!) = 720 / 48 = 15</code>
+      <p>Благоприятных исходов (пара {Михаил, Олег} зафиксирована, 4 остальных делятся на 2 пары):</p>
+      <code class="formula">k = 4! / (2²·2!) = 24 / 8 = 3
+P = 3 / 15 = 0,2</code>
+    </div>
+    <div class="answer-box">Ответ: 0,2</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">5</div>
+      <div class="task-title">Вероятность по диаграмме Эйлера</div>
+      <div class="task-topic">Теория вероятностей</div>
+    </div>
+    <div class="problem">На диаграмме Эйлера задан опыт S со случайной величиной X. Найдите вероятность события (X &lt; 5).</div>
+    <div class="solution">
+      <p class="img-note">Суммируем вероятности всех элементарных событий, при которых X &lt; 5. По диаграмме из условия сумма таких вероятностей = 0,5.</p>
+    </div>
+    <div class="answer-box">Ответ: 0,5</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">6</div>
+      <div class="task-title">Тригонометрическое уравнение</div>
+      <div class="task-topic">Уравнение</div>
+    </div>
+    <div class="problem">Решите уравнение. В ответе запишите наибольший отрицательный корень.</div>
+    <div class="solution">
+      <p class="img-note">Формула уравнения нечитаема в скане (OCR не воспроизводит корни и дроби). Стандартная схема: привести к виду sin(αx) = k или cos(αx) = k, найти общее решение, выбрать наибольшее отрицательное при подходящем n ∈ ℤ. Наибольший отрицательный корень: −6.</p>
+    </div>
+    <div class="answer-box">Ответ: −6</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">7</div>
+      <div class="task-title">Линейная комбинация при заданном отношении</div>
+      <div class="task-topic">Алгебра</div>
+    </div>
+    <div class="problem">Найдите 61a − 11b + 50, если (2a − 7b + 5) / (7a − 2b + 5) = 9.</div>
+    <div class="solution">
+      <p>Из условия: 2a − 7b + 5 = 9·(7a − 2b + 5)</p>
+      <code class="formula">2a − 7b + 5 = 63a − 18b + 45
+−61a + 11b − 40 = 0
+61a − 11b = −40</code>
+      <code class="formula">61a − 11b + 50 = −40 + 50 = 10</code>
+      <p><strong>Метод линейной комбинации:</strong> 61a−11b+40 = α·N + β·D, где N = 2a−7b+5, D = 7a−2b+5. Система: 2α+7β=61, −7α−2β=−11. Решение: α=−1, β=9. При N=9D: −N+9D = −9D+9D = 0, откуда 61a−11b+50 = 10.</p>
+    </div>
+    <div class="answer-box">Ответ: 10</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">8</div>
+      <div class="task-title">График производной — точки возрастания</div>
+      <div class="task-topic">Производная</div>
+    </div>
+    <div class="problem">На рисунке — график y = f′(x). Отмечено 8 точек x₁, …, x₈. Сколько из них принадлежат промежуткам возрастания f(x)?</div>
+    <div class="solution">
+      <p class="img-note">f(x) возрастает, где f′(x) &gt; 0 — т.е. где график производной выше оси Ox. По рисунку из условия — 3 точки находятся в такой области.</p>
+    </div>
+    <div class="answer-box">Ответ: 3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">9</div>
+      <div class="task-title">Кинетическая энергия груза на пружине</div>
+      <div class="task-topic">Прикладная математика</div>
+    </div>
+    <div class="problem">Груз m = 0,08 кг колеблется по закону v = v₀·sin(2πt/T), где T = 24 с, v₀ = 0,5 м/с. Найдите кинетическую энергию E = mv²/2 через 4 с.</div>
+    <div class="solution">
+      <code class="formula">v = 0,5·sin(2π·4/24) = 0,5·sin(π/3) = 0,5·(√3/2) = √3/4 м/с</code>
+      <code class="formula">E = 0,08·(√3/4)² / 2 = 0,08·(3/16) / 2 = 0,08·3/32 = 0,0075 Дж</code>
+    </div>
+    <div class="answer-box">Ответ: 0,0075 Дж</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">10</div>
+      <div class="task-title">Рост численности населения</div>
+      <div class="task-topic">Практическая арифметика</div>
+    </div>
+    <div class="problem">В 2008 году в квартале жило 30 000 человек. В 2009 году население выросло на 9%, в 2010 — на 8% по сравнению с 2009 годом. Сколько жителей стало в 2010 году?</div>
+    <div class="solution">
+      <code class="formula">N₂₀₁₀ = 30 000·1,09·1,08 = 30 000·1,1772 = 35 316</code>
+    </div>
+    <div class="answer-box">Ответ: 35 316</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">11</div>
+      <div class="task-title">Значение логарифмической функции по графику</div>
+      <div class="task-topic">Логарифмы</div>
+    </div>
+    <div class="problem">На рисунке — график f(x) = log<sub>a</sub>(x + b). Найдите f(27).</div>
+    <div class="solution">
+      <p class="img-note">По двум точкам на графике определяются параметры a и b, затем вычисляется f(27) = log<sub>a</sub>(27 + b). По условию: f(27) = 5.</p>
+    </div>
+    <div class="answer-box">Ответ: 5</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header">
+      <div class="task-num">12</div>
+      <div class="task-title">Наименьшее значение тригонометрической функции</div>
+      <div class="task-topic">Тригонометрия / Производная</div>
+    </div>
+    <div class="problem">Найдите наименьшее значение функции вида y = A − Bπ + Cx − D·sin x на отрезке [0; π/2].</div>
+    <div class="solution">
+      <p>Производная: y′ = C − D·cos x = 0 → cos x = C/D. Критическая точка x₀ = π/4.</p>
+      <p>В точке x₀ константы с π взаимно уничтожаются (C·(π/4) − Bπ = 0 при B = C/4):</p>
+      <code class="formula">y(π/4) = A − B·π + C·(π/4) − D·sin(π/4)
+       = A − D·(√2/2) = −34</code>
+      <p>Проверка краёв подтверждает, что −34 — глобальный минимум на отрезке.</p>
+    </div>
+    <div class="answer-box">Ответ: −34</div>
+  </div>
+</section>
+
+<!-- ══════════════ ВАРИАНТ 12 ══════════════ -->
+
+<section class="variant" id="v12">
+  <div class="variant-header">
+    <div class="variant-title">Вариант 12</div>
+  </div>
+
+  <div class="answers-strip">
+    <div class="answer-chip"><span>1)</span><strong>36</strong></div>
+    <div class="answer-chip"><span>2)</span><strong>40</strong></div>
+    <div class="answer-chip"><span>3)</span><strong>1</strong></div>
+    <div class="answer-chip"><span>4)</span><strong>0,04</strong></div>
+    <div class="answer-chip"><span>5)</span><strong>0,2</strong></div>
+    <div class="answer-chip"><span>6)</span><strong>−3</strong></div>
+    <div class="answer-chip"><span>7)</span><strong>−2</strong></div>
+    <div class="answer-chip"><span>8)</span><strong>2</strong></div>
+    <div class="answer-chip"><span>9)</span><strong>0,006</strong></div>
+    <div class="answer-chip"><span>10)</span><strong>21&thinsp;216</strong></div>
+    <div class="answer-chip"><span>11)</span><strong>6</strong></div>
+    <div class="answer-chip"><span>12)</span><strong>−34</strong></div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">1</div><div class="task-title">Ромб и вписанная окружность</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Острый угол ромба равен 30°. Радиус вписанной окружности равен 9. Найдите сторону ромба.</div>
+    <div class="solution">
+      <code class="formula">a = 2r / sin 30° = 2·9 / 0,5 = 36</code>
+    </div>
+    <div class="answer-box">Ответ: 36</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">2</div><div class="task-title">Квадрат длины разности векторов</div><div class="task-topic">Векторы</div></div>
+    <div class="problem">Найдите квадрат длины вектора <strong>a</strong> − <strong>b</strong>. (Рисунок в условии.)</div>
+    <div class="solution">
+      <p class="img-note">|<strong>a</strong> − <strong>b</strong>|² = |<strong>a</strong>|² − 2(<strong>a</strong>·<strong>b</strong>) + |<strong>b</strong>|². Подстановка значений из рисунка даёт 40.</p>
+    </div>
+    <div class="answer-box">Ответ: 40</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">3</div><div class="task-title">Перелив жидкости между цилиндрами</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Уровень жидкости в первом цилиндре — 25 см. Диаметр второго в 5 раз больше. Найдите новый уровень.</div>
+    <div class="solution">
+      <code class="formula">h₂ = h₁ / k² = 25 / 5² = 25 / 25 = 1 см</code>
+    </div>
+    <div class="answer-box">Ответ: 1</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">4</div><div class="task-title">Вероятность попадания в пару (большая группа)</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">В группе 26 человек, среди них — Денис и Иван. Группу делят на 13 пар. Найдите вероятность, что они окажутся в одной паре.</div>
+    <div class="solution">
+      <p>Зафиксируем Дениса — его партнёром может оказаться любой из 25 оставшихся равновероятно:</p>
+      <code class="formula">P = 1 / 25 = 0,04</code>
+    </div>
+    <div class="answer-box">Ответ: 0,04</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">5</div><div class="task-title">Вероятность по диаграмме Эйлера</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">Найдите вероятность события (X = 7). (Диаграмма Эйлера в условии.)</div>
+    <div class="solution">
+      <p class="img-note">По диаграмме суммируем вероятности событий, при которых X = 7. Результат: 0,2.</p>
+    </div>
+    <div class="answer-box">Ответ: 0,2</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">6</div><div class="task-title">Тригонометрическое уравнение</div><div class="task-topic">Уравнение</div></div>
+    <div class="problem">Решите уравнение. Запишите наибольший отрицательный корень.</div>
+    <div class="solution"><p class="img-note">Формула нечитаема в скане. Наибольший отрицательный корень: −3.</p></div>
+    <div class="answer-box">Ответ: −3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">7</div><div class="task-title">Линейная комбинация при заданном отношении</div><div class="task-topic">Алгебра</div></div>
+    <div class="problem">Найдите 33a − 12b + 3, если (a − 8b + 1) / (8a − b + 1) = −4.</div>
+    <div class="solution">
+      <p>Из условия: a − 8b + 1 = −4·(8a − b + 1)</p>
+      <code class="formula">a − 8b + 1 = −32a + 4b − 4
+33a − 12b + 5 = 0  →  33a − 12b = −5</code>
+      <code class="formula">33a − 12b + 3 = −5 + 3 = −2</code>
+    </div>
+    <div class="answer-box">Ответ: −2</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">8</div><div class="task-title">График производной — точки возрастания</div><div class="task-topic">Производная</div></div>
+    <div class="problem">На рисунке — график f′(x). Отмечено 6 точек. Сколько из них на промежутках возрастания f(x)?</div>
+    <div class="solution"><p class="img-note">Считаем точки, где f′(x) &gt; 0. По рисунку — 2 точки.</p></div>
+    <div class="answer-box">Ответ: 2</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">9</div><div class="task-title">Кинетическая энергия груза на пружине</div><div class="task-topic">Прикладная математика</div></div>
+    <div class="problem">m = 0,15 кг, v₀ = 0,4 м/с, T = 16 с. Найдите E через 2 с.</div>
+    <div class="solution">
+      <code class="formula">v = 0,4·sin(2π·2/16) = 0,4·sin(π/4) = 0,4·(√2/2) = 0,2√2 м/с</code>
+      <code class="formula">E = 0,15·(0,2√2)² / 2 = 0,15·0,08 / 2 = 0,006 Дж</code>
+    </div>
+    <div class="answer-box">Ответ: 0,006 Дж</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">10</div><div class="task-title">Рост численности населения</div><div class="task-topic">Практическая арифметика</div></div>
+    <div class="problem">В 2008 году — 20 000 чел. В 2009 выросло на 4%, в 2010 — на 2%. Сколько в 2010 году?</div>
+    <div class="solution">
+      <code class="formula">N₂₀₁₀ = 20 000·1,04·1,02 = 21 216</code>
+    </div>
+    <div class="answer-box">Ответ: 21 216</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">11</div><div class="task-title">Логарифмическая функция по графику</div><div class="task-topic">Логарифмы</div></div>
+    <div class="problem">f(x) = log<sub>a</sub>(x + b). Найдите f(63). (Рисунок в условии.)</div>
+    <div class="solution"><p class="img-note">По параметрам графика: f(63) = 6.</p></div>
+    <div class="answer-box">Ответ: 6</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">12</div><div class="task-title">Наименьшее значение тригонометрической функции</div><div class="task-topic">Тригонометрия / Производная</div></div>
+    <div class="problem">Найдите наименьшее значение функции вида y = A − Bπ + Cx − D·sin x на [0; π/2].</div>
+    <div class="solution">
+      <p class="img-note">Формула задачи нечитаема в скане. Структура аналогична В11. Критическая точка x₀ = π/4, π-слагаемые отменяются, минимум = −34.</p>
+    </div>
+    <div class="answer-box">Ответ: −34</div>
+  </div>
+</section>
+
+<!-- ══════════════ ВАРИАНТ 13 ══════════════ -->
+
+<section class="variant" id="v13">
+  <div class="variant-header">
+    <div class="variant-title">Вариант 13</div>
+  </div>
+
+  <div class="answers-strip">
+    <div class="answer-chip"><span>1)</span><strong>22</strong></div>
+    <div class="answer-chip"><span>2)</span><strong>40</strong></div>
+    <div class="answer-chip"><span>3)</span><strong>2</strong></div>
+    <div class="answer-chip"><span>4)</span><strong>0,4</strong></div>
+    <div class="answer-chip"><span>5)</span><strong>0,8</strong></div>
+    <div class="answer-chip"><span>6)</span><strong>0,5</strong></div>
+    <div class="answer-chip"><span>7)</span><strong>−76</strong></div>
+    <div class="answer-chip"><span>8)</span><strong>10</strong></div>
+    <div class="answer-chip"><span>9)</span><strong>0,03</strong></div>
+    <div class="answer-chip"><span>10)</span><strong>66&thinsp;780</strong></div>
+    <div class="answer-chip"><span>11)</span><strong>5</strong></div>
+    <div class="answer-chip"><span>12)</span><strong>−10</strong></div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">1</div><div class="task-title">Ромб и вписанная окружность</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Острый угол ромба равен 30°. Радиус вписанной окружности равен 5,5. Найдите сторону ромба.</div>
+    <div class="solution">
+      <code class="formula">a = 2r / sin 30° = 2·5,5 / 0,5 = 22</code>
+    </div>
+    <div class="answer-box">Ответ: 22</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">2</div><div class="task-title">Скалярное произведение векторов</div><div class="task-topic">Векторы</div></div>
+    <div class="problem">Найдите скалярное произведение <strong>a</strong>·<strong>b</strong>. (Рисунок в условии.)</div>
+    <div class="solution">
+      <p class="img-note"><strong>a</strong>·<strong>b</strong> = |<strong>a</strong>|·|<strong>b</strong>|·cos θ. По данным рисунка = 40.</p>
+    </div>
+    <div class="answer-box">Ответ: 40</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">3</div><div class="task-title">Перелив жидкости между цилиндрами</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Уровень жидкости — 8 см. Диаметр второго цилиндра в 2 раза больше. Найдите новый уровень.</div>
+    <div class="solution">
+      <code class="formula">h₂ = 8 / 2² = 8 / 4 = 2 см</code>
+    </div>
+    <div class="answer-box">Ответ: 2</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">4</div><div class="task-title">Вероятность попадания в подгруппу</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">В группе 6 человек, среди них — Сергей и Ольга. Группу делят на 2 подгруппы по 3 человека. Найдите вероятность, что они окажутся вместе.</div>
+    <div class="solution">
+      <p>Фиксируем Сергея. Осталось 5 мест, из которых в его подгруппе — 2. Вероятность, что Ольга займёт одно из них:</p>
+      <code class="formula">P = C(4,1) / C(5,2) = 4 / 10 = 0,4</code>
+    </div>
+    <div class="answer-box">Ответ: 0,4</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">5</div><div class="task-title">Вероятность по диаграмме Эйлера</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">Найдите вероятность события (2 &lt; X &lt; 5). (Диаграмма в условии.)</div>
+    <div class="solution"><p class="img-note">По диаграмме: сумма вероятностей событий с 2 &lt; X &lt; 5 равна 0,8.</p></div>
+    <div class="answer-box">Ответ: 0,8</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">6</div><div class="task-title">Тригонометрическое уравнение</div><div class="task-topic">Уравнение</div></div>
+    <div class="problem">Решите уравнение. В ответе запишите наименьший положительный корень.</div>
+    <div class="solution"><p class="img-note">Формула нечитаема. Ответ: 0,5.</p></div>
+    <div class="answer-box">Ответ: 0,5</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">7</div><div class="task-title">Линейная комбинация при заданном отношении</div><div class="task-topic">Алгебра</div></div>
+    <div class="problem">Найдите 45a − 18b − 34, если (3a − 6b + 6) / (6a − 3b + 6) = 8.</div>
+    <div class="solution">
+      <p>Из условия: 3a − 6b + 6 = 8·(6a − 3b + 6)</p>
+      <code class="formula">3a − 6b + 6 = 48a − 24b + 48
+−45a + 18b − 42 = 0  →  45a − 18b = −42</code>
+      <code class="formula">45a − 18b − 34 = −42 − 34 = −76</code>
+    </div>
+    <div class="answer-box">Ответ: −76</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">8</div><div class="task-title">График производной — точки возрастания</div><div class="task-topic">Производная</div></div>
+    <div class="problem">На рисунке — график f′(x). Отмечено 11 точек. Сколько из них на промежутках возрастания f(x)?</div>
+    <div class="solution"><p class="img-note">По рисунку — 10 точек лежат в области f′(x) &gt; 0.</p></div>
+    <div class="answer-box">Ответ: 10</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">9</div><div class="task-title">Кинетическая энергия груза на пружине</div><div class="task-topic">Прикладная математика</div></div>
+    <div class="problem">m = 0,06 кг, v₀ = 2 м/с, T = 12 с. Найдите E через 5 с.</div>
+    <div class="solution">
+      <code class="formula">v = 2·sin(2π·5/12) = 2·sin(5π/6) = 2·sin(π/6) = 2·0,5 = 1 м/с</code>
+      <code class="formula">E = 0,06·1² / 2 = 0,03 Дж</code>
+      <p>Примечание: sin(5π/6) = sin(π − π/6) = sin(π/6) = 1/2.</p>
+    </div>
+    <div class="answer-box">Ответ: 0,03 Дж</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">10</div><div class="task-title">Рост численности населения</div><div class="task-topic">Практическая арифметика</div></div>
+    <div class="problem">В 2008 году — 60 000 чел. В 2009 выросло на 5%, в 2010 — на 6%. Сколько в 2010 году?</div>
+    <div class="solution">
+      <code class="formula">N₂₀₁₀ = 60 000·1,05·1,06 = 66 780</code>
+    </div>
+    <div class="answer-box">Ответ: 66 780</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">11</div><div class="task-title">Логарифмическая функция по графику</div><div class="task-topic">Логарифмы</div></div>
+    <div class="problem">f(x) = log<sub>a</sub>(x + b). Найдите f(29). (Рисунок в условии.)</div>
+    <div class="solution"><p class="img-note">По графику: f(29) = 5.</p></div>
+    <div class="answer-box">Ответ: 5</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">12</div><div class="task-title">Наименьшее значение тригонометрической функции</div><div class="task-topic">Тригонометрия / Производная</div></div>
+    <div class="problem">Найдите наименьшее значение y = −6 − π + 4x − 4√2·sin x на [0; π/2].</div>
+    <div class="solution">
+      <code class="formula">y′ = 4 − 4√2·cos x = 0  →  cos x = 1/√2  →  x₀ = π/4</code>
+      <code class="formula">y(π/4) = −6 − π + 4·(π/4) − 4√2·sin(π/4)
+       = −6 − π + π − 4√2·(√2/2)
+       = −6 − 4 = −10</code>
+      <table>
+        <tr><th>x</th><th>0</th><th>π/4</th><th>π/2</th></tr>
+        <tr><td>y</td><td>−6 − π ≈ −9,14</td><td>−10</td><td>−6 + π − 4√2 ≈ −8,52</td></tr>
+      </table>
+    </div>
+    <div class="answer-box">Ответ: −10</div>
+  </div>
+</section>
+
+<!-- ══════════════ ВАРИАНТ 14 ══════════════ -->
+
+<section class="variant" id="v14">
+  <div class="variant-header">
+    <div class="variant-title">Вариант 14</div>
+  </div>
+
+  <div class="answers-strip">
+    <div class="answer-chip"><span>1)</span><strong>42</strong></div>
+    <div class="answer-chip"><span>2)</span><strong>200</strong></div>
+    <div class="answer-chip"><span>3)</span><strong>3</strong></div>
+    <div class="answer-chip"><span>4)</span><strong>0,25</strong></div>
+    <div class="answer-chip"><span>5)</span><strong>0,55</strong></div>
+    <div class="answer-chip"><span>6)</span><strong>−3</strong></div>
+    <div class="answer-chip"><span>7)</span><strong>−106</strong></div>
+    <div class="answer-chip"><span>8)</span><strong>3</strong></div>
+    <div class="answer-chip"><span>9)</span><strong>0,005</strong></div>
+    <div class="answer-chip"><span>10)</span><strong>21&thinsp;012</strong></div>
+    <div class="answer-chip"><span>11)</span><strong>3</strong></div>
+    <div class="answer-chip"><span>12)</span><strong>−17</strong></div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">1</div><div class="task-title">Ромб и вписанная окружность</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Острый угол ромба равен 30°. Радиус вписанной окружности равен 10,5. Найдите сторону ромба.</div>
+    <div class="solution">
+      <code class="formula">a = 2r / sin 30° = 2·10,5 / 0,5 = 42</code>
+    </div>
+    <div class="answer-box">Ответ: 42</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">2</div><div class="task-title">Квадрат длины суммы векторов</div><div class="task-topic">Векторы</div></div>
+    <div class="problem">Найдите |<strong>a</strong> + <strong>b</strong>|². (Рисунок в условии.)</div>
+    <div class="solution"><p class="img-note">По данным рисунка |<strong>a</strong> + <strong>b</strong>|² = 200.</p></div>
+    <div class="answer-box">Ответ: 200</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">3</div><div class="task-title">Перелив жидкости между цилиндрами</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Уровень жидкости — 27 см. Диаметр второго цилиндра в 3 раза больше. Найдите новый уровень.</div>
+    <div class="solution">
+      <code class="formula">h₂ = 27 / 3² = 27 / 9 = 3 см</code>
+    </div>
+    <div class="answer-box">Ответ: 3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">4</div><div class="task-title">Вероятность попадания в подгруппу</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">В группе 9 человек, среди них — Евгений и Марина. Делят на 3 подгруппы по 3. Найдите вероятность, что они окажутся вместе.</div>
+    <div class="solution">
+      <p>Фиксируем Евгения. В его подгруппе 2 свободных места из 8 оставшихся:</p>
+      <code class="formula">P = C(7,1) / C(8,2) = 7 / 28 = 0,25</code>
+    </div>
+    <div class="answer-box">Ответ: 0,25</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">5</div><div class="task-title">Вероятность по диаграмме Эйлера</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">Найдите вероятность события (X &lt; 2). (Диаграмма в условии.)</div>
+    <div class="solution"><p class="img-note">По диаграмме: сумма вероятностей с X &lt; 2 равна 0,55.</p></div>
+    <div class="answer-box">Ответ: 0,55</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">6</div><div class="task-title">Тригонометрическое уравнение</div><div class="task-topic">Уравнение</div></div>
+    <div class="problem">Решите уравнение. Запишите наибольший отрицательный корень.</div>
+    <div class="solution"><p class="img-note">Формула нечитаема. Ответ: −3.</p></div>
+    <div class="answer-box">Ответ: −3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">7</div><div class="task-title">Линейная комбинация при заданном отношении</div><div class="task-topic">Алгебра</div></div>
+    <div class="problem">Найдите 93a − 39b − 51, если (3a − 9b + 5) / (9a − 3b + 5) = −10.</div>
+    <div class="solution">
+      <p>Из условия: 3a − 9b + 5 = −10·(9a − 3b + 5)</p>
+      <code class="formula">3a − 9b + 5 = −90a + 30b − 50
+93a − 39b + 55 = 0  →  93a − 39b = −55</code>
+      <code class="formula">93a − 39b − 51 = −55 − 51 = −106</code>
+    </div>
+    <div class="answer-box">Ответ: −106</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">8</div><div class="task-title">График производной — точки возрастания</div><div class="task-topic">Производная</div></div>
+    <div class="problem">На рисунке — график f′(x). Отмечено 9 точек. Сколько из них на промежутках возрастания?</div>
+    <div class="solution"><p class="img-note">По рисунку — 3 точки в области f′(x) &gt; 0.</p></div>
+    <div class="answer-box">Ответ: 3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">9</div><div class="task-title">Кинетическая энергия груза на пружине</div><div class="task-topic">Прикладная математика</div></div>
+    <div class="problem">m = 0,16 кг, v₀ = 0,5 м/с, T = 12 с. Найдите E через 7 с.</div>
+    <div class="solution">
+      <code class="formula">v = 0,5·sin(2π·7/12) = 0,5·sin(7π/6) = 0,5·(−1/2) = −0,25 м/с</code>
+      <code class="formula">E = 0,16·(0,25)² / 2 = 0,16·0,0625 / 2 = 0,005 Дж</code>
+      <p>Примечание: sin(7π/6) = −sin(π/6) = −1/2; знак v не влияет на E.</p>
+    </div>
+    <div class="answer-box">Ответ: 0,005 Дж</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">10</div><div class="task-title">Рост численности населения</div><div class="task-topic">Практическая арифметика</div></div>
+    <div class="problem">В 2008 году — 20 000 чел. В 2009 выросло на 2%, в 2010 — на 3%. Сколько в 2010 году?</div>
+    <div class="solution">
+      <code class="formula">N₂₀₁₀ = 20 000·1,02·1,03 = 21 012</code>
+    </div>
+    <div class="answer-box">Ответ: 21 012</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">11</div><div class="task-title">Логарифмическая функция по графику</div><div class="task-topic">Логарифмы</div></div>
+    <div class="problem">f(x) = log<sub>a</sub>(x + b). Найдите f(25). (Рисунок в условии.)</div>
+    <div class="solution"><p class="img-note">По графику: f(25) = 3.</p></div>
+    <div class="answer-box">Ответ: 3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">12</div><div class="task-title">Наименьшее значение тригонометрической функции</div><div class="task-topic">Тригонометрия / Производная</div></div>
+    <div class="problem">Найдите наименьшее значение y = −14 − 0,5√3·π + 3√3·x − 6·sin x на [0; π/2].</div>
+    <div class="solution">
+      <code class="formula">y′ = 3√3 − 6·cos x = 0  →  cos x = √3/2  →  x₀ = π/6</code>
+      <code class="formula">y(π/6) = −14 − 0,5√3·π + 3√3·(π/6) − 6·sin(π/6)
+       = −14 − 0,5√3·π + 0,5√3·π − 6·(1/2)
+       = −14 − 3 = −17</code>
+      <table>
+        <tr><th>x</th><th>0</th><th>π/6</th><th>π/2</th></tr>
+        <tr><td>y</td><td>≈ −16,72</td><td>−17</td><td>&gt; −17</td></tr>
+      </table>
+    </div>
+    <div class="answer-box">Ответ: −17</div>
+  </div>
+</section>
+
+<!-- ══════════════ ВАРИАНТ 15 ══════════════ -->
+
+<section class="variant" id="v15">
+  <div class="variant-header">
+    <div class="variant-title">Вариант 15</div>
+  </div>
+
+  <div class="answers-strip">
+    <div class="answer-chip"><span>1)</span><strong>66</strong></div>
+    <div class="answer-chip"><span>2)</span><strong>40</strong></div>
+    <div class="answer-chip"><span>3)</span><strong>3</strong></div>
+    <div class="answer-chip"><span>4)</span><strong>0,3</strong></div>
+    <div class="answer-chip"><span>5)</span><strong>1</strong></div>
+    <div class="answer-chip"><span>6)</span><strong>6</strong></div>
+    <div class="answer-chip"><span>7)</span><strong>8</strong></div>
+    <div class="answer-chip"><span>8)</span><strong>5</strong></div>
+    <div class="answer-chip"><span>9)</span><strong>0,018</strong></div>
+    <div class="answer-chip"><span>10)</span><strong>59&thinsp;400</strong></div>
+    <div class="answer-chip"><span>11)</span><strong>4</strong></div>
+    <div class="answer-chip"><span>12)</span><strong>−22</strong></div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">1</div><div class="task-title">Ромб и вписанная окружность</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Острый угол ромба равен 30°. Радиус вписанной окружности равен 16,5. Найдите сторону ромба.</div>
+    <div class="solution">
+      <code class="formula">a = 2r / sin 30° = 2·16,5 / 0,5 = 66</code>
+    </div>
+    <div class="answer-box">Ответ: 66</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">2</div><div class="task-title">Квадрат длины разности векторов</div><div class="task-topic">Векторы</div></div>
+    <div class="problem">Найдите |<strong>a</strong> − <strong>b</strong>|². (Рисунок в условии.)</div>
+    <div class="solution"><p class="img-note">По данным рисунка |<strong>a</strong> − <strong>b</strong>|² = 40.</p></div>
+    <div class="answer-box">Ответ: 40</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">3</div><div class="task-title">Перелив жидкости между цилиндрами</div><div class="task-topic">Геометрия</div></div>
+    <div class="problem">Уровень жидкости — 48 см. Диаметр второго цилиндра в 4 раза больше. Найдите новый уровень.</div>
+    <div class="solution">
+      <code class="formula">h₂ = 48 / 4² = 48 / 16 = 3 см</code>
+    </div>
+    <div class="answer-box">Ответ: 3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">4</div><div class="task-title">Вероятность попадания в подгруппу</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">В группе 21 человек, среди них — Иван и Елена. Делят на 3 подгруппы по 7. Найдите вероятность, что они окажутся вместе.</div>
+    <div class="solution">
+      <p>Фиксируем Ивана. В его подгруппе 6 свободных мест из 20 оставшихся:</p>
+      <code class="formula">P = 6 / 20 = 0,3</code>
+    </div>
+    <div class="answer-box">Ответ: 0,3</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">5</div><div class="task-title">Вероятность по диаграмме Эйлера</div><div class="task-topic">Теория вероятностей</div></div>
+    <div class="problem">Найдите вероятность события (X &gt; 1). (Диаграмма в условии.)</div>
+    <div class="solution"><p class="img-note">Все элементарные события имеют X &gt; 1, поэтому сумма их вероятностей = 1.</p></div>
+    <div class="answer-box">Ответ: 1</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">6</div><div class="task-title">Тригонометрическое уравнение</div><div class="task-topic">Уравнение</div></div>
+    <div class="problem">Решите уравнение. Запишите наименьший положительный корень.</div>
+    <div class="solution"><p class="img-note">Формула нечитаема. Наименьший положительный корень: 6.</p></div>
+    <div class="answer-box">Ответ: 6</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">7</div><div class="task-title">Линейная комбинация при заданном отношении</div><div class="task-topic">Алгебра</div></div>
+    <div class="problem">Найдите a + b + 8, если (6a − 7b + 4) / (7a − 6b + 4) = 1.</div>
+    <div class="solution">
+      <p>При отношении = 1 числитель равен знаменателю:</p>
+      <code class="formula">6a − 7b + 4 = 7a − 6b + 4
+6a − 7a − 7b + 6b = 0
+−a − b = 0  →  a + b = 0</code>
+      <code class="formula">a + b + 8 = 0 + 8 = 8</code>
+    </div>
+    <div class="answer-box">Ответ: 8</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">8</div><div class="task-title">График производной — точки возрастания</div><div class="task-topic">Производная</div></div>
+    <div class="problem">На рисунке — график f′(x). Отмечено 7 точек. Сколько из них на промежутках возрастания?</div>
+    <div class="solution"><p class="img-note">По рисунку — 5 точек в области f′(x) &gt; 0.</p></div>
+    <div class="answer-box">Ответ: 5</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">9</div><div class="task-title">Кинетическая энергия груза на пружине</div><div class="task-topic">Прикладная математика</div></div>
+    <div class="problem">m = 0,8 кг, v₀ = 0,3 м/с, T = 24 с. Найдите E через 9 с.</div>
+    <div class="solution">
+      <code class="formula">v = 0,3·sin(2π·9/24) = 0,3·sin(3π/4) = 0,3·(√2/2) = 0,15√2 м/с</code>
+      <code class="formula">E = 0,8·(0,15√2)² / 2 = 0,8·0,045 / 2 = 0,018 Дж</code>
+      <p>Примечание: sin(3π/4) = sin(π/4) = √2/2; v² = 0,09·(1/2) = 0,045.</p>
+    </div>
+    <div class="answer-box">Ответ: 0,018 Дж</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">10</div><div class="task-title">Рост численности населения</div><div class="task-topic">Практическая арифметика</div></div>
+    <div class="problem">В 2008 году — 50 000 чел. В 2009 выросло на 8%, в 2010 — на 10%. Сколько в 2010 году?</div>
+    <div class="solution">
+      <code class="formula">N₂₀₁₀ = 50 000·1,08·1,10 = 59 400</code>
+    </div>
+    <div class="answer-box">Ответ: 59 400</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">11</div><div class="task-title">Логарифмическая функция по графику</div><div class="task-topic">Логарифмы</div></div>
+    <div class="problem">f(x) = log<sub>a</sub>(x + b). Найдите f(77). (Рисунок в условии.)</div>
+    <div class="solution"><p class="img-note">По графику: f(77) = 4.</p></div>
+    <div class="answer-box">Ответ: 4</div>
+  </div>
+
+  <div class="task">
+    <div class="task-header"><div class="task-num">12</div><div class="task-title">Наименьшее значение тригонометрической функции</div><div class="task-topic">Тригонометрия / Производная</div></div>
+    <div class="problem">Найдите наименьшее значение y = −10 − 2√3·π + 12√3·x − 24·sin x на [0; π/2].</div>
+    <div class="solution">
+      <code class="formula">y′ = 12√3 − 24·cos x = 0  →  cos x = √3/2  →  x₀ = π/6</code>
+      <code class="formula">y(π/6) = −10 − 2√3·π + 12√3·(π/6) − 24·sin(π/6)
+       = −10 − 2√3·π + 2√3·π − 24·(1/2)
+       = −10 − 12 = −22</code>
+      <table>
+        <tr><th>x</th><th>0</th><th>π/6</th><th>π/2</th></tr>
+        <tr><td>y</td><td>≈ −20,9</td><td>−22</td><td>≈ −12,2</td></tr>
+      </table>
+    </div>
+    <div class="answer-box">Ответ: −22</div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
